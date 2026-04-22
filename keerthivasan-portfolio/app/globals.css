@@ -1,4 +1,15 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+}
 
 :root {
   --background: #ffffff;
