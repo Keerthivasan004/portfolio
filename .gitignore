@@ -1,0 +1,11 @@
+node_modules/
+client/dist/
+client/node_modules/
+server/node_modules/
+server/data/messages.json
+server/.env
+dist/
+.vite/
+*.log
+.DS_Store
+Thumbs.db

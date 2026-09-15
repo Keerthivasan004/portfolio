@@ -1,0 +1,14 @@
+{
+  "name": "keerthivasan-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Professional DevOps & Cloud portfolio — React (Vite) + Node.js (Express)",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "dev": "npm run dev:server & npm run dev:client",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "npm --prefix server start"
+  }
+}
