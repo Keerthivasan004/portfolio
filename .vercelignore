@@ -1,0 +1,11 @@
+# Ignore server folder (not needed for Vercel deployment)
+server/
+node_modules/
+client/node_modules/
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# Keep only client and api folders
