@@ -1,31 +1,29 @@
-import { BadgeCheck, FileCode2, KanbanSquare, GraduationCap } from 'lucide-react';
-import { certifications } from '../data/portfolio.js';
-import { SectionHeading } from './About.jsx';
-
-const icons = { azure: BadgeCheck, python: FileCode2, pm: KanbanSquare };
+import { BadgeCheck } from 'lucide-react';
+import { certifications, profile } from '../data/portfolio.js';
+import { Heading } from './About.jsx';
 
 export default function Certifications() {
   return (
-    <section className="block alt" id="certifications" aria-labelledby="certs-title">
+    <section className="block" id="certifications" aria-labelledby="certs-title">
       <div className="wrap">
-        <div id="certs-title"><SectionHeading kicker="Credentials" title="Certified foundations." sub="Cloud, code, and delivery — verified, not just claimed." /></div>
-        <div className="cert-grid">
-          {certifications.map((c) => {
-            const Icon = icons[c.icon] || BadgeCheck;
-            return (
-              <div className="ccard reveal" key={c.name}>
-                <span className="clogo"><Icon size={20} aria-hidden="true" /></span>
-                <div>
-                  <div className="cname">{c.name}</div>
-                  <div className="ciss">{c.code}</div>
-                </div>
-              </div>
-            );
-          })}
+        <div id="certs-title">
+          <Heading eyebrow="Credentials" title="Certifications and education." />
         </div>
-        <div className="edu-note reveal">
-          <strong><GraduationCap size={15} style={{ verticalAlign: -2 }} aria-hidden="true" /> Education — </strong>
-          B.Sc (Hons) Cloud Computing & Big Data, Reva University (2022–2025). Final-year focus on cloud infrastructure + ML (dyslexia prediction project).
+        <ul className="cert-list">
+          {certifications.map((c) => (
+            <li className="reveal" key={c.name}>
+              <span className="cert-ic"><BadgeCheck size={17} aria-hidden="true" /></span>
+              <div>
+                <b>{c.name}</b>
+                <span>{c.detail}</span>
+              </div>
+              <span className="cert-code">{c.code}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="edu reveal">
+          <strong>Education — </strong>
+          {profile.education}. Final-year focus on cloud infrastructure and machine learning.
         </div>
       </div>
     </section>

@@ -9,28 +9,6 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import { useReveal } from './hooks/hooks.js';
 
-const STACK = [
-  'Terraform', 'Kubernetes', 'Docker', 'GitHub Actions', 'Jenkins',
-  'Prometheus', 'Grafana', 'AWS', 'Azure', 'GCP', 'AKS', 'Python', 'Bash'
-];
-
-function Ticker() {
-  const row = (key) => (
-    <span className="ticker-row" key={key} aria-hidden={key === 1}>
-      {STACK.map((s) => (
-        <span className="ticker-item" key={`${key}-${s}`}>
-          {s} <i>///</i>
-        </span>
-      ))}
-    </span>
-  );
-  return (
-    <div className="ticker" aria-label="Core toolchain">
-      <div className="ticker-track">{[row(0), row(1)]}</div>
-    </div>
-  );
-}
-
 export default function App() {
   useReveal();
   return (
@@ -39,7 +17,6 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        <Ticker />
         <About />
         <Experience />
         <Skills />

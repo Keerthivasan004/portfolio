@@ -1,25 +1,23 @@
 // Single source of truth for portfolio content.
-// Update here and both the React UI + Node API pick it up.
 export const profile = {
   name: 'Keerthivasan R V',
   firstName: 'Keerthivasan',
-  roles: ['DevOps Engineer', 'Cloud Engineer', 'Backend Developer — Cloud & AI'],
+  title: 'DevOps & Cloud Engineer',
   headline: 'Entry-level DevOps & Cloud Engineer automating deployments, shipping CI/CD pipelines, and running observable infrastructure on AWS & Azure.',
-  education: 'B.Sc (Hons) Cloud Computing & Big Data — Reva University (2022–2025)',
+  education: 'B.Sc (Hons) Cloud Computing & Big Data — Reva University, 2022–2025',
   email: 'keerthivasanVA@gmail.com',
   phone: '+91 8220180450',
   linkedin: 'https://www.linkedin.com/in/keerthivasan-r-v-6238a622a/',
   github: 'https://github.com/Keerthivasan004',
   resumeUrl: '/Keerthivasan_RV_DevOps_Engineer_Resume.pdf',
-  openToWork: true,
-  typed: ['Azure & AKS', 'Docker & Kubernetes', 'CI/CD Pipelines', 'Terraform & IaC', 'Prometheus & Grafana', 'AWS & GCP']
+  focus: 'AWS · Azure · Docker · Kubernetes · Terraform'
 };
 
 export const stats = [
-  { value: '3', label: 'Cloud Platforms', sub: 'AWS · Azure · GCP' },
-  { value: '4', label: 'Production-style Projects', sub: 'CI/CD · HA · Monitoring' },
-  { value: '4', label: 'Certifications', sub: 'Azure · Python · PM' },
-  { value: '60%', label: 'Manual Effort Reduced', sub: 'At Proctor AI' }
+  { value: '3', suffix: '', label: 'Cloud platforms', sub: 'AWS · Azure · GCP' },
+  { value: '4', suffix: '', label: 'Production-style projects', sub: 'CI/CD · HA · Monitoring' },
+  { value: '4', suffix: '', label: 'Certifications', sub: 'Azure · Python · PM' },
+  { value: '60', suffix: '%', label: 'Manual effort removed', sub: 'Document automation, Proctor AI' }
 ];
 
 export const experience = [
@@ -27,6 +25,7 @@ export const experience = [
     role: 'Backend Web Developer — Cloud & AI Integration',
     company: 'Proctor AI',
     period: 'Apr 2025 – Jun 2025',
+    duration: '3 months · Remote, India',
     location: 'Remote / India',
     bullets: [
       'Automated document-processing with Azure OCR Computer Vision API + GCP Gemini API, cutting manual effort by 60%.',
@@ -39,106 +38,122 @@ export const experience = [
 
 export const skillGroups = [
   {
-    title: 'Cloud Platforms',
-    icon: 'cloud',
-    skills: ['AWS', 'Azure', 'GCP', 'EC2 · S3 · VPC', 'IAM · RDS · Route 53', 'CloudWatch', 'Azure VM · VMSS · AKS', 'Azure SQL', 'Azure Monitor']
+    area: 'Cloud Platforms',
+    note: 'Compute · Network · Data',
+    skills: 'AWS (EC2, S3, VPC, IAM, RDS, Route 53, CloudWatch) · Azure (VM, VMSS, AKS, Azure SQL, Monitor) · GCP',
+    level: 'Production',
+    levelClass: 'lvl-prod'
   },
   {
-    title: 'Containers & Orchestration',
-    icon: 'container',
-    skills: ['Docker', 'Kubernetes', 'AKS', 'Docker Compose', 'Container Registry']
+    area: 'Containers & Orchestration',
+    note: 'Build · Ship · Scale',
+    skills: 'Docker · Kubernetes · AKS · Docker Compose · Container Registry',
+    level: 'Production',
+    levelClass: 'lvl-prod'
   },
   {
-    title: 'CI/CD & Automation',
-    icon: 'pipeline',
-    skills: ['GitHub Actions', 'Jenkins', 'CI/CD Pipelines', 'Pipeline as Code']
+    area: 'CI/CD & Automation',
+    note: 'Pipelines as code',
+    skills: 'GitHub Actions · Jenkins · Pipeline as Code',
+    level: 'Production',
+    levelClass: 'lvl-prod'
   },
   {
-    title: 'Infrastructure as Code',
-    icon: 'infra',
-    skills: ['Terraform', 'Ansible', 'YAML', 'HCL', 'IaC']
+    area: 'Infrastructure as Code',
+    note: 'Reproducible envs',
+    skills: 'Terraform (HCL) · Ansible · YAML',
+    level: 'Proficient',
+    levelClass: 'lvl-prof'
   },
   {
-    title: 'Monitoring & Observability',
-    icon: 'monitor',
-    skills: ['Prometheus', 'Grafana', 'CloudWatch', 'Azure Monitor', 'Alerting']
+    area: 'Monitoring & Observability',
+    note: 'Metrics · Logs · Alerts',
+    skills: 'Prometheus · Grafana · CloudWatch · Azure Monitor',
+    level: 'Proficient',
+    levelClass: 'lvl-prof'
   },
   {
-    title: 'Scripting & Programming',
-    icon: 'code',
-    skills: ['Python', 'Bash / Shell', 'JavaScript / React', 'Node.js / Express', 'HTML', 'CSS']
+    area: 'Scripting & Programming',
+    note: 'Automation first',
+    skills: 'Python · Bash/Shell · JavaScript · Node.js/Express · HTML/CSS',
+    level: 'Proficient',
+    levelClass: 'lvl-prof'
   },
   {
-    title: 'OS, Networking & VCS',
-    icon: 'network',
-    skills: ['Ubuntu', 'CentOS', 'Windows', 'VPC · Security Groups', 'NAT · Route Tables', 'Git', 'GitHub']
-  },
-  {
-    title: 'Professional Skills',
-    icon: 'team',
-    skills: ['Problem-Solving', 'Adaptability', 'Teamwork', 'Communication', 'Time Management']
+    area: 'OS, Networking & VCS',
+    note: 'Foundations',
+    skills: 'Ubuntu · CentOS · Windows · VPC, Security Groups, NAT, Route Tables · Git/GitHub',
+    level: 'Working',
+    levelClass: 'lvl-work'
   }
 ];
 
 export const projects = [
   {
-    badge: 'DevOps · Azure · Featured',
-    title: 'End-to-End DevOps CI/CD Pipeline on Azure',
+    no: '01',
+    kind: 'DevOps · Azure · Featured',
+    title: 'End-to-End CI/CD Pipeline on Azure',
+    year: '2025',
     description:
-      'Docker builds + GitHub Actions deploys to AKS provisioned with Terraform. Prometheus & Grafana observe three microservices — manual deploys down 40%, troubleshooting time down 50%.',
-    tech: ['GitHub Actions', 'Docker', 'AKS', 'Terraform', 'Prometheus', 'Grafana', 'Azure'],
-    github: 'https://github.com/Keerthivasan004/devops-aks-monitoring-project',
-    impact: '−40% deploy effort · −50% MTTR'
+      'Docker builds and GitHub Actions deploys to Terraform-provisioned AKS. Prometheus & Grafana observe three microservices. Manual deploy effort down 40%, troubleshooting time down 50%.',
+    outcome: '−40% deploy effort · −50% MTTR',
+    stack: 'GitHub Actions / Docker / AKS / Terraform / Prometheus / Grafana',
+    github: 'https://github.com/Keerthivasan004/devops-aks-monitoring-project'
   },
   {
-    badge: 'AWS · Full-Stack + DevOps',
+    no: '02',
+    kind: 'AWS · Full-Stack + DevOps',
     title: 'Next.js on AWS with ALB + CloudWatch',
+    year: '2024',
     description:
-      'Deployed a Next.js app on EC2 with PM2, Application Load Balancer and Route 53 for high availability. CloudWatch dashboards + log groups sped up issue detection by 30%.',
-    tech: ['EC2', 'PM2', 'ALB', 'Route 53', 'CloudWatch', 'Next.js'],
-    github: 'https://github.com/Keerthivasan004',
-    impact: '+Uptime · −30% detection time'
+      'Next.js on EC2 with PM2, Application Load Balancer and Route 53 for availability. CloudWatch dashboards and log groups sped up issue detection by 30%.',
+    outcome: '+Uptime · −30% detection time',
+    stack: 'EC2 / PM2 / ALB / Route 53 / CloudWatch / Next.js',
+    github: 'https://github.com/Keerthivasan004'
   },
   {
-    badge: 'AWS · High Availability',
+    no: '03',
+    kind: 'AWS · High Availability',
     title: 'Scalable 3-Tier App on AWS',
+    year: '2024',
     description:
-      'EC2 Auto Scaling + ALB + RDS Multi-AZ 3-tier architecture. Handles traffic spikes with zero downtime and demonstrates HA patterns recruiters look for.',
-    tech: ['EC2 Auto Scaling', 'ALB', 'RDS Multi-AZ', '3-Tier Arch'],
-    github: 'https://github.com/Keerthivasan004',
-    impact: 'Zero-downtime scaling'
+      'EC2 Auto Scaling + ALB + RDS Multi-AZ three-tier architecture. Absorbs traffic spikes with zero downtime — the HA pattern hiring managers look for.',
+    outcome: 'Zero-downtime scaling',
+    stack: 'EC2 Auto Scaling / ALB / RDS Multi-AZ / 3-Tier',
+    github: 'https://github.com/Keerthivasan004'
   },
   {
-    badge: 'ML · Cloud · Social Impact',
+    no: '04',
+    kind: 'ML · Cloud · Social Impact',
     title: 'Predictive Analytics for Dyslexia',
+    year: '2024',
     description:
-      'Cloud-hosted ML classifiers for early dyslexia screening — accessible, scalable alternative to expensive clinical diagnostics. Python + cloud infra.',
-    tech: ['Python', 'Machine Learning', 'Cloud', 'Classification'],
-    github: 'https://github.com/Keerthivasan004/Minor-Project-Dyslexia-Prediction',
-    impact: 'Accessible early screening'
+      'Cloud-hosted ML classifiers for early dyslexia screening — an accessible, scalable alternative to expensive clinical diagnostics.',
+    outcome: 'Accessible early screening',
+    stack: 'Python / Machine Learning / Cloud / Classification',
+    github: 'https://github.com/Keerthivasan004/Minor-Project-Dyslexia-Prediction'
   }
 ];
 
 export const certifications = [
-  { name: 'Microsoft Azure Fundamentals', code: 'AZ-900 — Microsoft', icon: 'azure' },
-  { name: 'Microsoft Azure AI Fundamentals', code: 'AI-900 — Microsoft', icon: 'azure' },
-  { name: 'IT Specialist — Python', code: 'Information Technology Specialist', icon: 'python' },
-  { name: 'Google Project Management', code: 'Professional Certificate — Coursera', icon: 'pm' }
+  { name: 'Microsoft Azure Fundamentals', detail: 'Microsoft Certified', code: 'AZ-900' },
+  { name: 'Microsoft Azure AI Fundamentals', detail: 'Microsoft Certified', code: 'AI-900' },
+  { name: 'IT Specialist — Python', detail: 'Information Technology Specialist', code: 'Python' },
+  { name: 'Google Project Management', detail: 'Professional Certificate · Coursera', code: 'PM' }
 ];
 
-export const aboutCards = [
-  { icon: 'pipeline', title: 'CI/CD Pipelines', desc: 'GitHub Actions & Jenkins pipelines cutting manual deployment steps by 40%.' },
-  { icon: 'container', title: 'Containers & Orchestration', desc: 'Docker images + AKS/Kubernetes rollouts for scalable production workloads.' },
-  { icon: 'infra', title: 'Infrastructure as Code', desc: 'Terraform-provisioned AKS + networking — reproducible envs in minutes.' },
-  { icon: 'monitor', title: 'Monitoring & Observability', desc: 'Prometheus + Grafana + CloudWatch — 50% less manual troubleshooting.' },
-  { icon: 'ai', title: 'Cloud & AI Automation', desc: 'Azure OCR + GCP Gemini integrations — 60% less document-processing effort.' }
+export const principles = [
+  { title: 'Pipelines over clicks', desc: 'Every deploy is code-reviewed, repeatable GitHub Actions or Jenkins — manual steps down 40%.' },
+  { title: 'Infrastructure as code', desc: 'Terraform-provisioned AKS + networking. Reproducible environments in minutes, not days.' },
+  { title: 'Observable by default', desc: 'Prometheus + Grafana + CloudWatch on every service — 50% less manual troubleshooting.' },
+  { title: 'Automation with judgment', desc: 'Azure OCR + GCP Gemini cut document effort 60%. Automate the toil, keep humans for decisions.' }
 ];
 
 export const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#certifications', label: 'Certifications' },
-  { href: '#contact', label: 'Contact' }
+  { href: '#about', label: 'About', no: '01' },
+  { href: '#experience', label: 'Experience', no: '02' },
+  { href: '#skills', label: 'Skills', no: '03' },
+  { href: '#projects', label: 'Projects', no: '04' },
+  { href: '#certifications', label: 'Credentials', no: '05' },
+  { href: '#contact', label: 'Contact', no: '06' }
 ];
