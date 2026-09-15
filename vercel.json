@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build",
   "devCommand": "npm run dev:client",
-  "installCommand": "npm run install:all",
+  "installCommand": "npm run install:client",
   "framework": "vite",
   "outputDirectory": "client/dist",
   "rewrites": [

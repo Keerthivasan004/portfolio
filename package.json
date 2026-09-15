@@ -5,6 +5,7 @@
   "description": "Professional DevOps & Cloud portfolio — React (Vite) + Node.js (Express)",
   "scripts": {
     "install:all": "npm --prefix client install && npm --prefix server install",
+    "install:client": "npm --prefix client install",
     "dev:client": "npm --prefix client run dev",
     "dev:server": "npm --prefix server run dev",
     "dev": "npm run dev:server & npm run dev:client",
