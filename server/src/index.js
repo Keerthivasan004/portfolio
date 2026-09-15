@@ -23,12 +23,10 @@ app.use('/api/contact', contactLimiter);
 const profile = {
   name: 'Keerthivasan R V',
   headline: 'DevOps & Cloud Engineer — AWS · Azure · GCP · Docker · Kubernetes · Terraform · CI/CD',
-  location: 'Bengaluru, India — Open to Relocation',
   email: 'keerthivasanVA@gmail.com',
   phone: '+91 8220180450',
   linkedin: 'https://www.linkedin.com/in/keerthivasan-r-v-6238a622a/',
-  github: 'https://github.com/Keerthivasan004',
-  openToWork: true
+  github: 'https://github.com/Keerthivasan004'
 };
 
 const projects = [

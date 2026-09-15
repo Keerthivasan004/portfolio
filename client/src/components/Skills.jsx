@@ -9,16 +9,16 @@ const icons = {
 
 export default function Skills() {
   return (
-    <section className="block alt" id="skills">
+    <section className="block alt" id="skills" aria-labelledby="skills-title">
       <div className="wrap">
-        <SectionHeading kicker="// skills.config" title="Technical Skills" sub="The toolkit I use to ship reliable infrastructure." />
+        <div id="skills-title"><SectionHeading kicker="Skills" title="A toolkit for reliable systems." sub="Deep enough in each layer to debug across the stack — from VPC to pipeline to dashboard." /></div>
         <div className="skills-grid">
           {skillGroups.map((g) => {
             const Icon = icons[g.icon] || Code2;
             return (
               <div className="sgroup reveal" key={g.title}>
                 <div className="sghead">
-                  <span className="sgicon"><Icon size={18} /></span>
+                  <span className="sgicon"><Icon size={18} aria-hidden="true" /></span>
                   <span className="sgtitle">{g.title}</span>
                 </div>
                 <div className="tags">

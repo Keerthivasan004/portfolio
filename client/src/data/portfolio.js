@@ -5,7 +5,6 @@ export const profile = {
   firstName: 'Keerthivasan',
   roles: ['DevOps Engineer', 'Cloud Engineer', 'Backend Developer — Cloud & AI'],
   headline: 'Entry-level DevOps & Cloud Engineer automating deployments, shipping CI/CD pipelines, and running observable infrastructure on AWS & Azure.',
-  location: 'Bengaluru, India — Open to Relocation',
   education: 'B.Sc (Hons) Cloud Computing & Big Data — Reva University (2022–2025)',
   email: 'keerthivasanVA@gmail.com',
   phone: '+91 8220180450',
