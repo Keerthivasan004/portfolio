@@ -29,21 +29,21 @@ export default function About() {
         <div className="about-grid">
           <div className="about-copy reveal">
             <p>
-              I&apos;m <strong>Keerthivasan R V</strong>, a DevOps Engineer at{' '}
-              <strong>BCBUZZ Technologies</strong>. I <strong>completely worked on futrsec.in</strong> and
+              I&apos;m Keerthivasan R V, a DevOps Engineer at{' '}
+              <strong>BCBUZZ Technologies</strong>. I completely worked on futrsec.in and
               operate it end-to-end (React + Node.js, CI/CD, Azure + Hostinger infrastructure) — and I{' '}
-              <strong>just deployed dpdp.bcbuzz.io (SYRA Data)</strong> to production.
+              just deployed dpdp.bcbuzz.io (SYRA Data) to production.
             </p>
             <p>
-              Infrastructure I manage: <strong>Azure</strong> (App Service, app configuration, environment
-              variables, deployment slots, logs, scaling) + <strong>Hostinger</strong> (DNS zones, domains,
+              Infrastructure I manage: Azure (App Service, app configuration, environment
+              variables, deployment slots, logs, scaling) + Hostinger (DNS zones, domains,
               nameservers, TLS). Single owner for releases, uptime and incident response on both apps.
             </p>
             <p>
-              My practice is <strong>AI-accelerated delivery</strong>: I build with Antigravity and GenAI
+              My practice is AI-accelerated delivery: I build with Antigravity and GenAI
               engineering copilots for rapid scaffolding, disciplined AI-assisted review, and systematic
               debugging of deployment failures — senior-team velocity with full production accountability.
-              Previously at <strong>Proctor AI</strong>, I cut document-processing effort by <strong>60%</strong> with Azure OCR + GCP Gemini automation.
+              Previously at <strong>Proctor AI</strong>, I cut document-processing effort by 60% with Azure OCR + GCP Gemini automation.
             </p>
           </div>
           <ul className="cap-list reveal" style={{ ['--d']: '100ms' }}>

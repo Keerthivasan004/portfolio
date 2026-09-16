@@ -32,11 +32,10 @@ export default function Hero() {
             I ship <span className="typed-word">{typed}</span><span className="caret" aria-hidden="true" />
           </p>
           <p className="hero-bio">
-            I <strong>completely worked on <a href="https://futrsec.in" target="_blank" rel="noreferrer">futrsec.in</a></strong> and
-            operate it end-to-end — plus <strong>just deployed <a href="https://dpdp.bcbuzz.io" target="_blank" rel="noreferrer">dpdp.bcbuzz.io (SYRA Data)</a> to
-            production</strong>. I manage infrastructure across <strong>Azure (App Service, config, scaling, logs)</strong> +{' '}
-            <strong>Hostinger (DNS, domains, TLS)</strong> with <strong>GitHub Actions CI/CD</strong> and an{' '}
-            <strong>AI-accelerated workflow</strong>.
+            I completely worked on <a href="https://futrsec.in" target="_blank" rel="noreferrer">futrsec.in</a> and
+            operate it end-to-end — plus just deployed <a href="https://dpdp.bcbuzz.io" target="_blank" rel="noreferrer">dpdp.bcbuzz.io (SYRA Data)</a> to
+            production. I manage infrastructure across Azure (App Service, config, scaling, logs) +{' '}
+            Hostinger (DNS, domains, TLS) with GitHub Actions CI/CD and an AI-accelerated workflow.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">View live work <ArrowRight size={16} aria-hidden="true" /></a>
