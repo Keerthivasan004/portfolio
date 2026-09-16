@@ -1,4 +1,5 @@
 import { GitBranch, Container, Layers, Activity } from 'lucide-react';
+import { bcbuzzPeriodLabel, bcbuzzTenure } from '../data/portfolio.js';
 
 export function Heading({ eyebrow, title, sub }) {
   return (
@@ -11,10 +12,10 @@ export function Heading({ eyebrow, title, sub }) {
 }
 
 const CAPS = [
-  { icon: GitBranch, title: 'CI/CD pipelines', desc: 'GitHub Actions and Jenkins pipelines that cut manual deployment steps by 40%.' },
-  { icon: Container, title: 'Containers & Kubernetes', desc: 'Docker images and AKS rollouts for scalable production workloads.' },
-  { icon: Layers, title: 'Infrastructure as code', desc: 'Terraform-provisioned clusters and networking. Reproducible envs in minutes.' },
-  { icon: Activity, title: 'Monitoring', desc: 'Prometheus, Grafana and CloudWatch. 50% less manual troubleshooting.' }
+  { icon: GitBranch, title: 'FUTRSEC — fully owned', desc: 'Completely worked on futrsec.in: build → GitHub Actions CI/CD → Azure + Hostinger infra → production ops.' },
+  { icon: Container, title: 'SYRA — just deployed', desc: 'Just shipped dpdp.bcbuzz.io to production: App Service deploy, domain + TLS go-live, release debugging.' },
+  { icon: Layers, title: 'Infra I manage: Azure + Hostinger', desc: 'App Service, envs, slots, logs, scaling + DNS zones, domains, nameservers, TLS. Single owner for uptime.' },
+  { icon: Activity, title: 'AI-accelerated delivery', desc: 'Antigravity + GenAI copilots for rapid iteration, rigorous review and fast deploy debugging.' }
 ];
 
 export default function About() {
@@ -22,19 +23,27 @@ export default function About() {
     <section className="block" id="about" aria-labelledby="about-title">
       <div className="wrap">
         <div id="about-title">
-          <Heading eyebrow="About" title="Engineer focused on reliable, automated systems."
-            sub="B.Sc (Hons) in Cloud Computing and Big Data from Reva University. I work across AWS, Azure and GCP with a toolchain of Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, Prometheus and Grafana." />
+          <Heading eyebrow="About" title="DevOps Engineer — FUTRSEC owner, SYRA shipper."
+            sub={`DevOps Engineer at BCBUZZ Technologies (${bcbuzzPeriodLabel()} · ${bcbuzzTenure()}). Completely worked on futrsec.in, just deployed dpdp.bcbuzz.io, managing infra across Azure + Hostinger with GitHub Actions CI/CD.`} />
         </div>
         <div className="about-grid">
           <div className="about-copy reveal">
             <p>
-              I&apos;m <strong>Keerthivasan R V</strong>, a DevOps and Cloud Engineer.
-              At <strong>Proctor AI</strong> I worked as a Backend Web Developer (Cloud & AI Integration),
-              automating document workflows with Azure OCR and GCP Gemini — reducing manual effort by <strong>60%</strong>.
+              I&apos;m <strong>Keerthivasan R V</strong>, a DevOps Engineer at{' '}
+              <strong>BCBUZZ Technologies</strong>. I <strong>completely worked on futrsec.in</strong> and
+              operate it end-to-end (React + Node.js, CI/CD, Azure + Hostinger infrastructure) — and I{' '}
+              <strong>just deployed dpdp.bcbuzz.io (SYRA Data)</strong> to production.
             </p>
             <p>
-              I care about the fundamentals: infrastructure as code, boring deploys, and observability
-              on every service.
+              Infrastructure I manage: <strong>Azure</strong> (App Service, app configuration, environment
+              variables, deployment slots, logs, scaling) + <strong>Hostinger</strong> (DNS zones, domains,
+              nameservers, TLS). Single owner for releases, uptime and incident response on both apps.
+            </p>
+            <p>
+              My practice is <strong>AI-accelerated delivery</strong>: I build with Antigravity and GenAI
+              engineering copilots for rapid scaffolding, disciplined AI-assisted review, and systematic
+              debugging of deployment failures — senior-team velocity with full production accountability.
+              Previously at <strong>Proctor AI</strong>, I cut document-processing effort by <strong>60%</strong> with Azure OCR + GCP Gemini automation.
             </p>
           </div>
           <ul className="cap-list reveal" style={{ ['--d']: '100ms' }}>

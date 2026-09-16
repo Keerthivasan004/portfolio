@@ -1,12 +1,12 @@
 import { Heading } from './About.jsx';
 
 const GROUPS = [
-  { title: 'Cloud', body: 'AWS (EC2, S3, VPC, IAM, RDS, Route 53, CloudWatch) · Azure (VM, AKS, SQL, Monitor) · GCP' },
-  { title: 'Containers', body: 'Docker · Kubernetes · AKS · Docker Compose · Container Registry' },
-  { title: 'CI/CD', body: 'GitHub Actions · Jenkins · Pipeline as Code' },
-  { title: 'Infrastructure as code', body: 'Terraform (HCL) · Ansible · YAML' },
-  { title: 'Monitoring', body: 'Prometheus · Grafana · CloudWatch · Azure Monitor · Alerting' },
-  { title: 'Languages & OS', body: 'Python · Bash · JavaScript · Node.js · Ubuntu · Git' }
+  { title: 'Infrastructure I Manage (daily)', body: 'Azure App Service (config, envs, slots, logs, scaling) · Hostinger (DNS zones, domains, nameservers, TLS) · Azure VM, AKS, SQL, Monitor' },
+  { title: 'CI/CD', body: 'GitHub Actions · Git/GitHub (branching, PRs, releases) · Jenkins · Zero-downtime deploys + rollback' },
+  { title: 'AI-Accelerated Delivery', body: 'Antigravity · GenAI copilots · AI-assisted code review · AI-driven deploy debugging & RCA' },
+  { title: 'Full-Stack Ops', body: 'React.js · Node.js/Express · JavaScript · HTML/CSS — FUTRSEC fully owned, SYRA just shipped' },
+  { title: 'Containers & IaC', body: 'Docker · Kubernetes · AKS · Docker Compose · Terraform (HCL) · Ansible · YAML' },
+  { title: 'Monitoring', body: 'Prometheus · Grafana · CloudWatch · Azure Monitor · Log triage · Incident response' }
 ];
 
 export default function Skills() {
@@ -14,8 +14,8 @@ export default function Skills() {
     <section className="block" id="skills" aria-labelledby="skills-title">
       <div className="wrap">
         <div id="skills-title">
-          <Heading eyebrow="Skills" title="Technical skills."
-            sub="Working knowledge across the stack, from VPC to pipeline to dashboard." />
+          <Heading eyebrow="Skills" title="Infrastructure I manage."
+            sub="Azure + Hostinger in production daily — from DNS to deploy to dashboard." />
         </div>
         <div className="skills-grid">
           {GROUPS.map((g) => (

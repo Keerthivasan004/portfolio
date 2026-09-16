@@ -1,5 +1,15 @@
-import { experience } from '../data/portfolio.js';
+import { experience, bcbuzzPeriodLabel, formatTenure } from '../data/portfolio.js';
 import { Heading } from './About.jsx';
+
+function tenureFor(job) {
+  if (job.startDate) return formatTenure(job.startDate);
+  return null;
+}
+
+function periodFor(job) {
+  if (job.company === 'BCBUZZ Technologies') return bcbuzzPeriodLabel();
+  return job.period;
+}
 
 export default function Experience() {
   return (
@@ -7,11 +17,11 @@ export default function Experience() {
       <div className="wrap">
         <div id="exp-title">
           <Heading eyebrow="Experience" title="Work experience."
-            sub="Professional experience plus production-style project work." />
+            sub="Currently operating production on Azure at BCBUZZ Technologies — plus prior cloud & AI integration work." />
         </div>
         {experience.map((e) => (
           <article className="job reveal" key={e.company}>
-            <div className="job-date">{e.period}<br />{e.duration}</div>
+            <div className="job-date">{periodFor(e)}<br />{tenureFor(e) ? `${tenureFor(e)} · ${e.location}` : e.duration}</div>
             <div>
               <div className="job-role">{e.role}</div>
               <div className="job-co">{e.company}</div>

@@ -22,7 +22,7 @@ app.use('/api/contact', contactLimiter);
 // ---- Data (mirrors client/src/data/portfolio.js) ----
 const profile = {
   name: 'Keerthivasan R V',
-  headline: 'DevOps & Cloud Engineer — AWS · Azure · GCP · Docker · Kubernetes · Terraform · CI/CD',
+  headline: 'DevOps Engineer @ BCBUZZ Technologies — FUTRSEC fully owned, SYRA just deployed, infra managed across Azure + Hostinger',
   email: 'keerthivasanVA@gmail.com',
   phone: '+91 8220180450',
   linkedin: 'https://www.linkedin.com/in/keerthivasan-r-v-6238a622a/',
@@ -30,6 +30,8 @@ const profile = {
 };
 
 const projects = [
+  { title: 'FUTRSEC — Cybersecurity Talent Ecosystem (futrsec.in) — fully owned', stack: ['Azure App Service', 'Hostinger Infra', 'GitHub Actions', 'React.js', 'Node.js'], live: 'https://futrsec.in' },
+  { title: 'SYRA Data — DPDPA Compliance Platform (dpdp.bcbuzz.io) — just deployed', stack: ['Azure', 'GitHub Actions', 'React.js', 'Node.js'], live: 'https://dpdp.bcbuzz.io' },
   { title: 'End-to-End DevOps CI/CD Pipeline on Azure', stack: ['GitHub Actions', 'Docker', 'AKS', 'Terraform', 'Prometheus', 'Grafana'], github: 'https://github.com/Keerthivasan004/devops-aks-monitoring-project' },
   { title: 'Next.js on AWS with ALB + CloudWatch', stack: ['EC2', 'PM2', 'ALB', 'Route 53', 'CloudWatch'] },
   { title: 'Scalable 3-Tier App on AWS', stack: ['EC2 Auto Scaling', 'ALB', 'RDS Multi-AZ'] },

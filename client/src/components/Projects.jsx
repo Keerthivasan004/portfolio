@@ -3,11 +3,12 @@ import { ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/portfolio.js';
 import { Heading } from './About.jsx';
 
-const FILTERS = ['All', 'Azure', 'AWS', 'ML'];
+const FILTERS = ['All', 'Production', 'Azure', 'AWS', 'ML'];
 
 function matches(p, f) {
   if (f === 'All') return true;
-  if (f === 'Azure') return p.kind.includes('Azure') || p.kind.includes('DevOps');
+  if (f === 'Production') return p.kind.includes('Production') || p.kind.includes('Flagship') || p.kind.includes('Deployed') || p.kind.includes('Owned');
+  if (f === 'Azure') return p.kind.includes('Azure') || p.kind.includes('DevOps') || p.kind.includes('BCBUZZ');
   if (f === 'AWS') return p.kind.includes('AWS');
   if (f === 'ML') return p.kind.includes('ML');
   return true;
@@ -21,8 +22,8 @@ export default function Projects() {
     <section className="block" id="projects" aria-labelledby="projects-title">
       <div className="wrap">
         <div id="projects-title">
-          <Heading eyebrow="Projects" title="Selected projects."
-            sub="Each one covers CI/CD, high-availability design, and monitoring." />
+          <Heading eyebrow="Projects" title="FUTRSEC owned · SYRA just shipped."
+            sub="Flagship first: futrsec.in I completely worked on and operate — then dpdp.bcbuzz.io just deployed — then CI/CD and HA builds." />
         </div>
         <div className="tabs" role="tablist" aria-label="Filter projects">
           {FILTERS.map((f) => (
@@ -35,8 +36,8 @@ export default function Projects() {
         <ul className="work-list">
           {visible.map((p, i) => (
             <li key={p.title}>
-              <a className="work-row reveal" href={p.github} target="_blank" rel="noreferrer"
-                aria-label={`${p.title} on GitHub`} style={{ ['--d']: `${i * 60}ms` }}>
+              <a className="work-row reveal" href={p.live || p.github} target="_blank" rel="noreferrer"
+                aria-label={`${p.title} — ${p.live ? 'live site' : 'on GitHub'}`} style={{ ['--d']: `${i * 60}ms` }}>
                 <span className="work-no">{String(i + 1).padStart(2, '0')}</span>
                 <span>
                   <span className="work-kind">{p.kind} · {p.year}</span>
