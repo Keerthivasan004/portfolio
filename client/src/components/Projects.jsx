@@ -22,8 +22,8 @@ export default function Projects() {
     <section className="block" id="projects" aria-labelledby="projects-title">
       <div className="wrap">
         <div id="projects-title">
-          <Heading eyebrow="Projects" title="FUTRSEC owned · SYRA just shipped."
-            sub="Flagship first: futrsec.in I completely worked on and operate — then dpdp.bcbuzz.io just deployed — then CI/CD and HA builds." />
+          <Heading no="04" eyebrow="Projects" title="Selected work"
+            sub="Flagship lifts first: futrsec.in — fully owned and operated, dpdp.bcbuzz.io — just shipped. Then CI/CD, monitoring and HA builds." />
         </div>
         <div className="tabs" role="tablist" aria-label="Filter projects">
           {FILTERS.map((f) => (

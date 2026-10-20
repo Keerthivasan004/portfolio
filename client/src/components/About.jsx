@@ -1,10 +1,13 @@
 import { GitBranch, Container, Layers, Activity } from 'lucide-react';
 import { bcbuzzPeriodLabel, bcbuzzTenure } from '../data/portfolio.js';
 
-export function Heading({ eyebrow, title, sub }) {
+export function Heading({ eyebrow, title, sub, no }) {
   return (
     <div className="reveal">
-      <div className="eyebrow-sm">{eyebrow}</div>
+      <div className="eyebrow-sm">
+        {no ? <span className="no">{no}</span> : null}
+        <span>{eyebrow}</span>
+      </div>
       <h2 className="h2">{title}</h2>
       {sub ? <p className="sub">{sub}</p> : null}
     </div>
@@ -23,7 +26,7 @@ export default function About() {
     <section className="block" id="about" aria-labelledby="about-title">
       <div className="wrap">
         <div id="about-title">
-          <Heading eyebrow="About" title="DevOps Engineer — FUTRSEC owner, SYRA shipper."
+          <Heading no="01" eyebrow="About" title="DevOps Engineer — build to production."
             sub={`DevOps Engineer at BCBUZZ Technologies (${bcbuzzPeriodLabel()} · ${bcbuzzTenure()}). Completely worked on futrsec.in, just deployed dpdp.bcbuzz.io, managing infra across Azure + Hostinger with GitHub Actions CI/CD.`} />
         </div>
         <div className="about-grid">

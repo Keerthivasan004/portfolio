@@ -26,6 +26,10 @@ export default function Hero() {
     <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="wrap hero-grid">
         <div>
+          <div className="status-pill">
+            <span className="status-dot" aria-hidden="true" />
+            Open to DevOps &amp; Cloud roles
+          </div>
           <h1 className="hero-name" id="hero-title">Keerthivasan R V</h1>
           <p className="hero-role">DevOps Engineer @ BCBUZZ Technologies</p>
           <p className="hero-focus" aria-live="polite">

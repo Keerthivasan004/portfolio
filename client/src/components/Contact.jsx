@@ -67,7 +67,7 @@ export default function Contact() {
     <section className="block" id="contact" aria-labelledby="contact-title">
       <div className="wrap">
         <div id="contact-title">
-          <Heading eyebrow="Contact" title="Get in touch."
+          <Heading no="06" eyebrow="Contact" title="Get in touch"
             sub="For DevOps and Cloud roles, collaborations, or referrals." />
         </div>
         <div className="contact-grid">
@@ -81,6 +81,8 @@ export default function Contact() {
               </button>
             </div>
             <dl className="contact-rows">
+              <div><dt>Availability</dt><dd><strong>Open to DevOps &amp; Cloud roles</strong></dd></div>
+              <div><dt>Response time</dt><dd>24–48 hours</dd></div>
               <div><dt>LinkedIn</dt><dd><a href={profile.linkedin} target="_blank" rel="noreferrer">View profile <ArrowUpRight size={12} aria-hidden="true" /></a></dd></div>
               <div><dt>GitHub</dt><dd><a href={profile.github} target="_blank" rel="noreferrer">View repositories <ArrowUpRight size={12} aria-hidden="true" /></a></dd></div>
               <div><dt>Resume</dt><dd><a href={profile.resumeUrl} download>Download PDF</a></dd></div>

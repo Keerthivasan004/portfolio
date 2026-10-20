@@ -7,7 +7,8 @@ export default function Certifications() {
     <section className="block" id="certifications" aria-labelledby="certs-title">
       <div className="wrap">
         <div id="certs-title">
-          <Heading eyebrow="Credentials" title="Certifications and education." />
+          <Heading no="05" eyebrow="Credentials" title="Certifications and education"
+            sub="Vendor certifications grounded in Azure and cloud tooling." />
         </div>
         <ul className="cert-list">
           {certifications.map((c) => (

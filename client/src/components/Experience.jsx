@@ -16,7 +16,7 @@ export default function Experience() {
     <section className="block" id="experience" aria-labelledby="exp-title">
       <div className="wrap">
         <div id="exp-title">
-          <Heading eyebrow="Experience" title="Work experience."
+          <Heading no="02" eyebrow="Experience" title="Work experience"
             sub="Currently operating production on Azure at BCBUZZ Technologies — plus prior cloud & AI integration work." />
         </div>
         {experience.map((e) => (

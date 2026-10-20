@@ -6,11 +6,13 @@ import { useTheme } from '../hooks/hooks.js';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
   const [theme, toggleTheme] = useTheme();
   const isDark = theme === 'dark';
 
   useEffect(() => {
     const onScroll = () => {
+      setScrolled(window.scrollY > 6);
       const secs = document.querySelectorAll('main section[id]');
       let cur = 'home';
       secs.forEach((s) => {
@@ -35,9 +37,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="nav" aria-label="Primary">
+      <nav className={`nav${scrolled ? ' scrolled' : ''}`} aria-label="Primary">
         <div className="nav-inner">
-          <a href="#home" className="brand">Keerthivasan R V <span>— DevOps</span></a>
+          <a href="#home" className="brand"><span className="brand-mark" aria-hidden="true">KV</span>Keerthivasan R V <span>— DevOps</span></a>
           <div className="nav-right">
             <ul className="nav-links">
               {navLinks.map((l) => {
